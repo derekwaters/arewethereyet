@@ -22,7 +22,7 @@ public class PlaceDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments().containsKey(ARG_ITEM_ID)) {
-            mItem = TripData.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mItem = TripData.TRIP_MAP.get(getArguments().getString(ARG_ITEM_ID));
         }
     }
 
@@ -31,7 +31,7 @@ public class PlaceDetailFragment extends Fragment {
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_place_detail, container, false);
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.place_detail)).setText(mItem.content);
+            ((TextView) rootView.findViewById(R.id.place_detail)).setText(mItem.toString());
         }
         return rootView;
     }

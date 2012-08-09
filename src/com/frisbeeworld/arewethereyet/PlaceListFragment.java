@@ -2,7 +2,6 @@ package com.frisbeeworld.arewethereyet;
 
 import com.frisbeeworld.arewethereyet.data.TripData;
 
-import android.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -19,12 +18,12 @@ public class PlaceListFragment extends ListFragment {
 
     public interface Callbacks {
 
-        public void onItemSelected(String id);
+        public void onItemSelected(Integer id);
     }
 
     private static Callbacks sDummyCallbacks = new Callbacks() {
         @Override
-        public void onItemSelected(String id) {
+        public void onItemSelected(Integer id) {
         }
     };
 
@@ -35,9 +34,9 @@ public class PlaceListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setListAdapter(new ArrayAdapter<TripData.Trip>(getActivity(),
-                R.layout.simple_list_item_activated_1,
-                R.id.text1,
-                TripData.ITEMS));
+        		R.layout.trip_list_item,
+                R.id.trip_item_label,
+                TripData.TRIPS));
     }
 
     @Override
@@ -68,7 +67,7 @@ public class PlaceListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long id) {
         super.onListItemClick(listView, view, position, id);
-        mCallbacks.onItemSelected(TripData.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(TripData.TRIPS.get(position).id);
     }
 
     @Override

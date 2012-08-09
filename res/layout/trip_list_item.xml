@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/trip_item_thumbnail" 
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="LABEL GOES HERE"
+            android:id="@+id/trip_item_label"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trip_item_source"
+            android:drawableLeft="@drawable/trip_item_icon_source"
+            android:text="SOURCE GOES HERE"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trip_item_dest"
+            android:drawableLeft="@drawable/trip_item_icon_dest"
+            android:text="DEST GOES HERE"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trip_item_datetime"
+            android:gravity="right"
+            android:textSize="8dp"
+            android:text="DATE GOES HERE"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -36,10 +36,10 @@ public class PlaceListActivity extends FragmentActivity
     }
 
     @Override
-    public void onItemSelected(String id) {
+    public void onItemSelected(Integer id) {
         if (mTwoPane) {
             Bundle arguments = new Bundle();
-            arguments.putString(PlaceDetailFragment.ARG_ITEM_ID, id);
+            arguments.putInt(PlaceDetailFragment.ARG_ITEM_ID, id);
             PlaceDetailFragment fragment = new PlaceDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
