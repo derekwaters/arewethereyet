@@ -15,9 +15,11 @@
             android:name=".PlaceListActivity"
             android:label="@string/title_place_list" >
             <intent-filter>
-        		<action android:name="android.intent.action.MAIN" />
-        		<category android:name="android.intent.category.LAUNCHER" />
-    		</intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="TripHome" />
@@ -28,6 +30,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PlaceListActivity" />
+        </activity>
+        <activity
+            android:name=".AddPlaceActivity"
+            android:label="@string/title_activity_add_place" >
+        </activity>
+        <activity
+            android:name=".AddTripActivity"
+            android:label="@string/title_activity_add_trip" >
         </activity>
     </application>
 

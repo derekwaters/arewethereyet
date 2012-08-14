@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 public class PlaceListActivity extends FragmentActivity
@@ -25,13 +27,30 @@ public class PlaceListActivity extends FragmentActivity
         }
     }
 
+    
+    
     @Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.trip_list_menu, menu);
+		return true;
+	}
+
+	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
-        }
+    		case R.id.menu_add_place:
+    			Intent addPlaceIntent = new Intent(this, AddPlaceActivity.class);
+    			this.startActivity(addPlaceIntent);
+    			return true;
+    		case R.id.menu_add_trip:
+    			Intent addTripIntent = new Intent(this, AddTripActivity.class);
+    			this.startActivity(addTripIntent);
+    			return true;
+    	}
         return super.onOptionsItemSelected(item);
     }
 
