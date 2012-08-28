@@ -8,7 +8,36 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/hello_world"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/add_place_title"
         tools:context=".AddPlaceActivity" />
-
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:spinnerMode="dropdown"
+        android:id="@+id/add_place_type_spinner"/>
+    <EditText 
+        android:id="@+id/add_place_description"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:hint="@string/add_place_description_hint"
+        />
+    <Button
+        android:id="@+id/add_place_add_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add_place_photos"
+        />
+    <Gallery
+        android:id="@+id/add_place_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
 </RelativeLayout>

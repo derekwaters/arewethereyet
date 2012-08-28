@@ -9,5 +9,10 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_add_place">Add A Place</string>
     <string name="title_activity_add_trip">Add A Trip</string>
-
+    <string name="add_place_title">Add A New Place</string>
+	<string name="add_place_type">Type</string>
+	<string name="add_place_photos">Add Photos</string>
+	<string name="add_place_description_hint">Enter a description…</string>
+	<string name="done">Done</string>
+	<string name="discard">Discard</string>
 </resources>

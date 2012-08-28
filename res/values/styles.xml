@@ -1,5 +1,5 @@
 <resources>
 
-    <style name="AreWeThereYetDefaultTheme" parent="android:Theme.Holo" />
+    <style name="AreWeThereYetDefaultTheme" parent="android:Theme.Holo.Light" />
 
 </resources>
