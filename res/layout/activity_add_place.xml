@@ -1,22 +1,26 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"    
+    >
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:textSize="30dp"
         android:text="@string/add_place_title"
         tools:context=".AddPlaceActivity" />
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:spinnerMode="dropdown"
@@ -30,14 +34,10 @@
         />
     <Button
         android:id="@+id/add_place_add_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/add_place_photos"
-        />
-    <Gallery
-        android:id="@+id/add_place_gallery"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/add_place_photos"
         />
-</RelativeLayout>
+</LinearLayout>
+</ScrollView>

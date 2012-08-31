@@ -9,10 +9,22 @@ import java.util.Map;
 public class TripData {
 	
 	public enum PlaceType {
-		Toilets,
-		Eatery,
-		Accommodation,
-		Attraction
+		Toilets("Public Toilets"),
+		Eatery("Eatery"),
+		Accommodation("Accommodation"),
+		Attraction("Attraction");
+		
+		private String label;
+		
+		PlaceType(String theLabel)
+		{
+			this.label = theLabel;
+		}
+		
+		@Override public String toString()
+		{
+			return this.label;
+		}
 	}
 	
     public static class Trip {
